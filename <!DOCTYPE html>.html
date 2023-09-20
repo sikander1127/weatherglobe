@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <style>
+        
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#city-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #007BFF;
+    outline: none;
+    font-size: 16px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#current-weather {
+    padding: 20px;
+    background-color: rgba(0, 123, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    color: #333;
+}
+
+#forecast {
+    padding: 20px;
+    background-color: rgba(0, 123, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    color: #333;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#search-history {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#search-history li {
+    font-size: 16px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    color: #007BFF;
+}
+
+#search-history li:hover {
+    text-decoration: underline;
+    font-weight: bold;
+    color: #0056b3;
+}
+
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Dashboard</h1>
+        <form id="search-form">
+            <input type="text" id="city-input" placeholder="Enter city name">
+            <button type="submit">Search</button>
+        </form>
+        <div id="current-weather">
+            <!-- Weather data will be displayed here -->
+        </div>
+        <div id="forecast">
+            <!-- 5-day forecast data will be displayed here -->
+        </div>
+        <h2>Search History</h2>
+        <ul id="search-history">
+            <!-- Search history items will be displayed here -->
+        </ul>
+    </div>
+    <script src="Assets/script.js"></script>
+</body>
+</html>
